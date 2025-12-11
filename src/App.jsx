@@ -36,13 +36,45 @@ function AppContent() {
     )
     .filter((q) => q.question.toLowerCase().includes(searchText.toLowerCase()));
 
-  const filters = [
+    const filtersByTab = {
+  react: [
     { label: "All", value: "all" },
     { label: "Important", value: "important" },
     { label: "Hooks", value: "hooks" },
     { label: "Basics", value: "basics" },
     { label: "Advance", value: "advance" },
-  ];
+  ],
+  javascript: [
+    { label: "All", value: "all" },
+    { label: "Important", value: "important" },
+    { label: "Basics", value: "basics" },
+    { label: "Advance", value: "advance" },
+  ],
+  html: [
+    { label: "All", value: "all" },
+    { label: "Basics", value: "basics" },
+    { label: "Advance", value: "advance" },
+  ],
+  css: [
+    { label: "All", value: "all" },
+    { label: "Basics", value: "basics" },
+    { label: "Advance", value: "advance" },
+  ],
+  nodejs: [
+    { label: "All", value: "all" },
+    { label: "Important", value: "important" },
+    { label: "Basics", value: "basics" },
+    { label: "Advance", value: "advance" },
+  ],
+};
+
+
+const filters = filtersByTab[activeTab] || filtersByTab["react"];
+useEffect(() => {
+  setSelectedFilter("all");
+}, [activeTab]);
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-500">
