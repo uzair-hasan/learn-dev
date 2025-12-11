@@ -1,453 +1,410 @@
 export const data = {
-  react: [
-    {
-      question: "What is React?",
-      answer:
-        "React is a JavaScript library for building user interfaces. It breaks the UI into small reusable components and updates only the parts that change, instead of reloading the whole page.",
-      category: "basics",
-    },
-    {
-      question: "What are components in React?",
-      answer:
-        "Components are independent, reusable blocks of UI that make up a React application. They can represent elements like buttons, forms, navbars, etc.",
-      category: "hooks",
-    },
-    {
-      question:
-        "What’s the difference between functional and class components?",
-      answer:
-        "Class components were the older way of building React components with lifecycle methods. Functional components are simpler and, with Hooks, can now manage state and side effects. Today, functional components are the preferred standard.",
-      category: "advance",
-    },
-    {
-      question: "What is JSX?",
-      answer:
-        "JSX is a syntax extension that allows writing HTML-like code inside JavaScript. React compiles it into JavaScript using createElement calls.",
-    },
-    {
-      question: "What is the Virtual DOM?",
-      answer:
-        "The Virtual DOM is an in-memory lightweight copy of the real DOM. React compares old and new virtual DOM trees and updates only the necessary parts in the real DOM, improving performance.",
-    },
-    {
-      question: "What are props in React?",
-      answer:
-        "Props are read-only data passed from parent to child components. They allow components to be dynamic and reusable but cannot be modified by the receiving component.",
-    },
-    {
-      question: "What is state in React?",
-      answer:
-        "State is data managed within a component. When state updates, React re-renders that component to reflect the new values.",
-    },
-    {
-      question: "What are React Fragments?",
-      answer:
-        "Fragments allow returning multiple elements without adding extra wrapper elements like <div>. They help keep the DOM structure clean.",
-    },
-    {
-      question: "What is conditional rendering in React?",
-      answer:
-        "Conditional rendering means showing different UI pieces depending on conditions, similar to using if-else logic inside JSX.",
-    },
-    {
-      question: "What are lists and keys in React?",
-      answer:
-        "Lists allow you to render dynamic data, and keys help React identify which items changed, were added, or removed, optimizing rendering.",
-    },
+ react: [
+  // BASICS
+  {
+    question: "What is React?",
+    answer: "React is a JavaScript library for building user interfaces...",
+    category: "basics"
+  },
+  {
+    question: "What are components in React?",
+    answer: "Components are independent, reusable blocks of UI...",
+    category: "basics"
+  },
+  {
+    question: "What’s the difference between functional and class components?",
+    answer: "Class components were the older way...",
+    category: "basics"
+  },
+  {
+    question: "What is JSX?",
+    answer: "JSX is a syntax extension that allows writing HTML-like code...",
+    category: "basics"
+  },
+  {
+    question: "What is the Virtual DOM?",
+    answer: "The Virtual DOM is a lightweight in-memory copy of the DOM...",
+    category: "basics"
+  },
+  {
+    question: "What are props in React?",
+    answer: "Props are read-only data passed from parent to child...",
+    category: "basics"
+  },
+  {
+    question: "What is state in React?",
+    answer: "State is data managed within a component...",
+    category: "basics"
+  },
+  {
+    question: "What are React Fragments?",
+    answer: "Fragments allow returning multiple elements without extra wrappers...",
+    category: "basics"
+  },
+  {
+    question: "What is conditional rendering in React?",
+    answer: "Conditional rendering means showing different UI pieces...",
+    category: "basics"
+  },
+  {
+    question: "What are lists and keys in React?",
+    answer: "Lists let you render data and keys help React track items...",
+    category: "basics"
+  },
 
-    // --------------------------
-    // React Hooks
-    // --------------------------
+  // HOOKS
+  {
+    question: "What are Hooks in React?",
+    answer: "Hooks allow functional components to use state and lifecycle features...",
+    category: "hooks"
+  },
+  {
+    question: "What is the useState hook?",
+    answer: "useState lets components add internal state...",
+    category: "hooks"
+  },
+  {
+    question: "What is the useEffect hook?",
+    answer: "useEffect allows performing side effects...",
+    category: "hooks"
+  },
+  {
+    question: "What is the difference between useEffect and useLayoutEffect?",
+    answer: "useEffect runs after paint, useLayoutEffect runs before paint...",
+    category: "hooks"
+  },
+  {
+    question: "What is the useRef hook?",
+    answer: "useRef stores mutable values without causing re-renders...",
+    category: "hooks"
+  },
+  {
+    question: "What is the useMemo hook?",
+    answer: "useMemo memoizes expensive computations...",
+    category: "hooks"
+  },
+  {
+    question: "What is the useCallback hook?",
+    answer: "useCallback memoizes function references...",
+    category: "hooks"
+  },
+  {
+    question: "What is useReducer in React?",
+    answer: "useReducer manages complex state using reducers...",
+    category: "hooks"
+  },
+  {
+    question: "When would you use useReducer instead of useState?",
+    answer: "Use useReducer when state logic is complex...",
+    category: "hooks"
+  },
+  {
+    question: "What are custom hooks in React?",
+    answer: "Custom hooks allow extracting reusable logic...",
+    category: "hooks"
+  },
+  {
+    question: "Can hooks be used inside loops or conditionals?",
+    answer: "No, hooks must run in the same order each render...",
+    category: "hooks"
+  },
+  {
+    question: "What happens if you update state directly?",
+    answer: "Direct state mutation won't trigger re-render...",
+    category: "hooks"
+  },
 
-    {
-      question: "What are Hooks in React?",
-      answer:
-        "Hooks are special functions that allow functional components to use features like state, lifecycle methods, and context. Examples include useState, useEffect, and useContext.",
-      category: "hooks",
-    },
-    {
-      question: "What is the useState hook?",
-      answer:
-        "useState lets components add state. It returns a state variable and a setter function. Updating state automatically triggers a re-render.",
-      category: "hooks",
-    },
-    {
-      question: "What is the useEffect hook?",
-      answer:
-        "useEffect allows performing side effects such as fetching data, subscriptions, or DOM manipulation. The dependency array controls when the effect runs—empty array runs once, no array runs on every render, and dependencies run when those values change.",
-      category: "hooks",
-    },
-    {
-      question: "What is the difference between useEffect and useLayoutEffect?",
-      answer:
-        "useEffect runs after the page paints, while useLayoutEffect runs before the browser updates the screen. useLayoutEffect is used when layout measurements or immediate DOM changes are required.",
-      category: "hooks",
-    },
-    {
-      question: "What is the useRef hook?",
-      answer:
-        "useRef stores mutable values without triggering re-renders and is commonly used for accessing DOM elements or storing persistent values like timer IDs.",
-      category: "hooks",
-    },
-    {
-      question: "What is the useMemo hook?",
-      answer:
-        "useMemo memoizes expensive computations so they only re-run when dependencies change, improving performance.",
-      category: "hooks",
-    },
-    {
-      question: "What is the useCallback hook?",
-      answer:
-        "useCallback memoizes function references so child components don’t re-render unnecessarily when the parent updates.",
-      category: "hooks",
-    },
-    {
-      question: "What is useReducer in React?",
-      answer:
-        "useReducer manages complex state logic using a reducer function and actions. It provides a predictable way to handle multiple related state updates.",
-      category: "hooks",
-    },
-    {
-      question: "When would you use useReducer instead of useState?",
-      answer:
-        "useReducer is preferred when state is complex, depends on previous values, or involves many actions. It organizes state updates more cleanly than multiple useState calls.",
-      category: "hooks",
-    },
-    {
-      question: "What are custom hooks in React?",
-      answer:
-        "Custom hooks are reusable functions that use built-in hooks to extract and share logic between components.",
-      category: "hooks",
-    },
-    {
-      question: "Can hooks be used inside loops or conditionals?",
-      answer:
-        "No. Hooks must be called in the same order every render. They cannot be used inside loops, conditions, or nested functions.",
-      category: "hooks",
-    },
-    {
-      question:
-        "What happens if you update state directly instead of using the updater function?",
-      answer:
-        "Directly modifying state does not trigger a re-render. The proper way is to use the setter function from useState.",
-      category: "hooks",
-    },
+  // ADVANCED
+  {
+    question: "What are controlled and uncontrolled components?",
+    answer: "Controlled components use React state, uncontrolled rely on DOM...",
+    category: "advance"
+  },
+  {
+    question: "What is lifting state up?",
+    answer: "Moving shared state to a parent component...",
+    category: "advance"
+  },
+  {
+    question: "What is Context API?",
+    answer: "Context API shares global data without prop drilling...",
+    category: "advance"
+  },
+  {
+    question: "What is the difference between Context API and Redux?",
+    answer: "Context is lightweight; Redux is for large complex apps...",
+    category: "advance"
+  },
+  {
+    question: "What is React.memo?",
+    answer: "React.memo prevents unnecessary re-renders...",
+    category: "advance"
+  },
+  {
+    question: "What is useImperativeHandle?",
+    answer: "It customizes what a parent can access using refs...",
+    category: "advance"
+  },
+  {
+    question: "What is reconciliation in React?",
+    answer: "Reconciliation compares old and new virtual DOM trees...",
+    category: "advance"
+  },
+  {
+    question: "What is React Fiber?",
+    answer: "Fiber is React’s new reconciliation engine...",
+    category: "advance"
+  },
+  {
+    question: "What is Suspense in React?",
+    answer: "Suspense pauses UI until data is ready...",
+    category: "advance"
+  },
+  {
+    question: "What is an Error Boundary?",
+    answer: "Error boundaries catch runtime errors in components...",
+    category: "advance"
+  },
 
-    // --------------------------
-    // Advanced React
-    // --------------------------
+  // PERFORMANCE
+  {
+    question: "How do you optimize performance in React apps?",
+    answer: "Memoization, lazy loading, avoiding re-renders...",
+    category: "advance"
+  },
+  {
+    question: "What is code splitting in React?",
+    answer: "Splitting the bundle to load only needed parts...",
+    category: "advance"
+  },
+  {
+    question: "What is lazy loading in React?",
+    answer: "Loading components only when needed...",
+    category: "advance"
+  },
+  {
+    question: "How do you prevent unnecessary re-renders?",
+    answer: "Using memoization and React.memo/useMemo/useCallback...",
+    category: "advance"
+  },
+  {
+    question: "What is tree shaking in React?",
+    answer: "Removing unused code during bundling...",
+    category: "advance"
+  },
+  {
+    question: "How do you test React components?",
+    answer: "Using Jest, RTL, Cypress...",
+    category: "advance"
+  },
+  {
+    question: "What is snapshot testing in React?",
+    answer: "Compares previous UI output to detect changes...",
+    category: "advance"
+  },
+  {
+    question: "How do you handle API errors in React?",
+    answer: "Use try/catch and fallback UI...",
+    category: "advance"
+  },
+  {
+    question: "What is PropTypes in React?",
+    answer: "Runtime type checking for props...",
+    category: "advance"
+  },
+  {
+    question: "What is TypeScript in React?",
+    answer: "Static typing for safer React apps...",
+    category: "advance"
+  },
 
-    {
-      question: "What are controlled and uncontrolled components?",
-      answer:
-        "Controlled components use React state to manage input values. Uncontrolled components let the DOM store values, accessed via refs.",
-      category: "advance",
-    },
-    {
-      question: "What is lifting state up?",
-      answer:
-        "Lifting state up means moving shared state to the nearest common parent so multiple child components can access and update it.",
-      category: "advance",
-    },
-    {
-      question: "What is Context API?",
-      answer:
-        "The Context API allows sharing global data across component trees without prop drilling. Useful for themes, authentication, language, etc.",
-      category: "advance",
-    },
-    {
-      question: "What is the difference between Context API and Redux?",
-      answer:
-        "Context is good for simple global state. Redux is better for large, complex applications with structured state updates and middleware.",
-      category: "advance",
-    },
-    {
-      question: "What is React.memo?",
-      answer:
-        "React.memo prevents unnecessary re-renders of functional components by shallowly comparing their props.",
-      category: "advance",
-    },
-    {
-      question: "What is useImperativeHandle?",
-      answer:
-        "useImperativeHandle customizes what a parent component can access when using a ref on a child component.",
-      category: "advance",
-    },
-    {
-      question: "What is reconciliation in React?",
-      answer:
-        "Reconciliation is the process where React compares the new virtual DOM with the previous one and updates only changed elements.",
-      category: "advance",
-    },
-    {
-      question: "What is React Fiber?",
-      answer:
-        "React Fiber is the engine that enables React to break rendering into small chunks and prioritize tasks for smooth UI updates.",
-      category: "advance",
-    },
-    {
-      question: "What is Suspense in React?",
-      answer:
-        "Suspense allows pausing the UI until something (like data loading) is ready, showing a fallback like a loader meanwhile.",
-      category: "advance",
-    },
-    {
-      question: "What is an Error Boundary?",
-      answer:
-        "Error boundaries catch runtime errors in components and show fallback UI instead of crashing the entire application.",
-      category: "advance",
-    },
+  // NEXT.JS & SECURITY
+  {
+    question: "What is server-side rendering (SSR) in Next.js?",
+    answer: "SSR renders pages on the server...",
+    category: "advance"
+  },
+  {
+    question: "What is static site generation (SSG)?",
+    answer: "SSG pre-renders HTML at build time...",
+    category: "advance"
+  },
+  {
+    question: "What is client-side rendering (CSR)?",
+    answer: "CSR renders content in the browser...",
+    category: "advance"
+  },
+  {
+    question: "How do you prevent XSS attacks in React?",
+    answer: "React escapes values; avoid dangerouslySetInnerHTML...",
+    category: "important"
+  },
+  {
+    question: "How do you handle CSRF attacks in React?",
+    answer: "By using CSRF tokens...",
+    category: "important"
+  },
+  {
+    question: "What is JWT and how is it used in React?",
+    answer: "JWT authenticates users; stored and sent with requests...",
+    category: "important"
+  },
+  {
+    question: "What is Webpack?",
+    answer: "Module bundler for JS assets...",
+    category: "advance"
+  },
+  {
+    question: "What is Babel?",
+    answer: "Transforms modern JS/JSX to browser-compatible JS...",
+    category: "advance"
+  },
+  {
+    question: "What is NPM?",
+    answer: "Package manager for JavaScript...",
+    category: "basics"
+  },
+  {
+    question: "How do you deploy a React app?",
+    answer: "Build and deploy to Netlify, Vercel, etc...",
+    category: "advance"
+  },
 
-    // --------------------------
-    // Performance & Testing
-    // --------------------------
+  // REDUX
+  {
+    question: "What is Redux?",
+    answer: "Redux is a predictable state container...",
+    category: "advance"
+  },
+  {
+    question: "Why use Redux instead of local state?",
+    answer: "It solves prop drilling and manages global state...",
+    category: "advance"
+  },
+  {
+    question: "What are actions in Redux?",
+    answer: "Plain objects describing events...",
+    category: "advance"
+  },
+  {
+    question: "What are reducers in Redux?",
+    answer: "Pure functions returning new state...",
+    category: "advance"
+  },
+  {
+    question: "What is the Redux store?",
+    answer: "Holds application state and processes actions...",
+    category: "advance"
+  },
+  {
+    question: "How do you dispatch actions in Redux?",
+    answer: "Use dispatch() or useDispatch...",
+    category: "advance"
+  },
+  {
+    question: "What is useSelector in Redux?",
+    answer: "Reads state from the store...",
+    category: "advance"
+  },
+  {
+    question: "What is useDispatch in Redux?",
+    answer: "Dispatches actions to reducers...",
+    category: "advance"
+  },
+  {
+    question: "What is Redux middleware?",
+    answer: "Runs between dispatch and reducer...",
+    category: "advance"
+  },
+  {
+    question: "What is Redux Thunk?",
+    answer: "Allows async logic in Redux...",
+    category: "advance"
+  },
+  {
+    question: "What is Redux Toolkit?",
+    answer: "Simplifies Redux with utilities...",
+    category: "advance"
+  },
+  {
+    question: "What is a slice in Redux Toolkit?",
+    answer: "Contains state, reducers, and actions for a feature...",
+    category: "advance"
+  },
+  {
+    question: "What is createAsyncThunk?",
+    answer: "Handles async actions with auto-generated states...",
+    category: "advance"
+  },
+  {
+    question: "How is combineReducers used?",
+    answer: "Merges multiple reducers...",
+    category: "advance"
+  },
+  {
+    question: "Difference between Redux and Redux Toolkit?",
+    answer: "RTK reduces boilerplate and simplifies Redux...",
+    category: "advance"
+  },
+  {
+    question: "Common Redux patterns?",
+    answer: "Slices, selectors, middleware, async thunks...",
+    category: "advance"
+  },
 
-    {
-      question: "How do you optimize performance in React apps?",
-      answer:
-        "By using memoization (React.memo, useMemo, useCallback), lazy loading, code splitting, and avoiding unnecessary re-renders.",
-    },
-    {
-      question: "What is code splitting in React?",
-      answer:
-        "Code splitting breaks your app into smaller bundles that load only when needed, improving performance.",
-    },
-    {
-      question: "What is lazy loading in React?",
-      answer:
-        "Lazy loading loads components only when required, reducing initial bundle size. Often used with React.lazy and Suspense.",
-    },
-    {
-      question: "How do you prevent unnecessary re-renders in React?",
-      answer:
-        "By memoizing functions/values and using React.memo, useCallback, and useMemo.",
-    },
-    {
-      question: "What is tree shaking in React?",
-      answer:
-        "Tree shaking removes unused code during the build process to reduce bundle size.",
-    },
-    {
-      question: "How do you test React components?",
-      answer:
-        "Using Jest for unit tests, React Testing Library for UI testing, and Cypress for end-to-end tests.",
-    },
-    {
-      question: "What is snapshot testing in React?",
-      answer:
-        "Snapshot testing stores component output and compares future renders to detect unexpected UI changes.",
-    },
-    {
-      question: "How do you handle API errors in React?",
-      answer:
-        "By using try/catch, handling errors in async functions, and showing fallback/error messages to users.",
-    },
-    {
-      question: "What is PropTypes in React?",
-      answer:
-        "PropTypes provide runtime type checking for component props to catch invalid data.",
-    },
-    {
-      question: "What is TypeScript in React?",
-      answer:
-        "TypeScript adds static typing to React, improving safety, maintainability, and developer experience.",
-    },
+  // EXTRA
+  {
+    question: "What is prop drilling?",
+    answer: "Passing props through multiple layers...",
+    category: "important"
+  },
+  {
+    question: "Difference between prop drilling and lifting state up?",
+    answer: "Prop drilling passes downward; lifting moves state upward...",
+    category: "advance"
+  },
+  {
+    question: "What are Higher-Order Components (HOCs)?",
+    answer: "Functions that return enhanced components...",
+    category: "advance"
+  },
+  {
+    question: "What are render props?",
+    answer: "A technique for sharing logic using functions that return JSX...",
+    category: "advance"
+  },
+  {
+    question: "What are React Portals?",
+    answer: "Render elements outside parent DOM hierarchy...",
+    category: "advance"
+  },
+  {
+    question: "What are common performance pitfalls in React?",
+    answer: "Unnecessary re-renders, inline heavy functions...",
+    category: "advance"
+  },
+  {
+    question: "What is lazy loading in React?",
+    answer: "Loads components when needed...",
+    category: "advance"
+  },
+  {
+    question: "What is the difference between controlled and uncontrolled components?",
+    answer: "Controlled use state; uncontrolled use DOM...",
+    category: "basics"
+  },
+  {
+    question: "What is React Fiber?",
+    answer: "React's concurrent rendering engine...",
+    category: "advance"
+  },
+  {
+    question: "What are concurrent features in React?",
+    answer: "Allow React to prioritize updates...",
+    category: "advance"
+  }
+],
 
-    // --------------------------
-    // Next.js, Security, Build Tools
-    // --------------------------
-
-    {
-      question: "What is server-side rendering (SSR) in Next.js?",
-      answer:
-        "SSR renders pages on the server before sending them to the browser, improving SEO and initial load speed.",
-    },
-    {
-      question: "What is static site generation (SSG)?",
-      answer:
-        "SSG pre-renders HTML at build time, serving fast, cached pages without server computation.",
-    },
-    {
-      question: "What is client-side rendering (CSR)?",
-      answer:
-        "CSR renders content in the browser using JavaScript, typical in pure React apps.",
-    },
-    {
-      question: "How do you prevent XSS attacks in React?",
-      answer:
-        "By letting React escape JSX values and avoiding dangerouslySetInnerHTML unless input is sanitized.",
-    },
-    {
-      question: "How do you handle CSRF attacks in React?",
-      answer:
-        "By sending CSRF tokens with requests and letting the server validate them.",
-    },
-    {
-      question: "What is JWT and how is it used in React?",
-      answer:
-        "JWT is a token used for authentication. React stores it and sends it with requests to verify the user's identity.",
-    },
-    {
-      question: "What is Webpack?",
-      answer:
-        "Webpack is a module bundler that packages JavaScript, CSS, images, and other assets for production.",
-    },
-    {
-      question: "What is Babel?",
-      answer:
-        "Babel compiles modern JavaScript and JSX into browser-compatible code.",
-    },
-    {
-      question: "What is NPM?",
-      answer:
-        "NPM is a package manager for installing and managing JavaScript libraries.",
-    },
-    {
-      question: "How do you deploy a React app?",
-      answer:
-        "By running npm run build and hosting the output on providers like Netlify, Vercel, or AWS S3.",
-    },
-
-    // --------------------------
-    // Redux
-    // --------------------------
-
-    {
-      question: "What is Redux?",
-      answer:
-        "Redux is a predictable state container that centralizes application state and makes debugging and state sharing easier.",
-    },
-    {
-      question: "Why use Redux instead of local state?",
-      answer:
-        "Redux solves prop drilling and helps manage global state shared across many components.",
-    },
-    {
-      question: "What are actions in Redux?",
-      answer:
-        "Actions are plain objects describing what happened. They contain a type and optional payload.",
-    },
-    {
-      question: "What are reducers in Redux?",
-      answer:
-        "Reducers are pure functions that take state and an action and return a new updated state.",
-    },
-    {
-      question: "What is the Redux store?",
-      answer:
-        "The store holds the entire application state and allows dispatching actions and subscribing to changes.",
-    },
-    {
-      question: "How do you dispatch actions in Redux?",
-      answer:
-        "Using the dispatch function, or useDispatch in React-Redux, to send actions to reducers.",
-    },
-    {
-      question: "What is useSelector in Redux?",
-      answer:
-        "useSelector accesses state from the Redux store inside components.",
-    },
-    {
-      question: "What is useDispatch in Redux?",
-      answer:
-        "useDispatch returns the dispatch function to send actions to the store.",
-    },
-    {
-      question: "What is Redux middleware?",
-      answer:
-        "Middleware runs between dispatching an action and reaching the reducer, handling tasks like logging or async requests.",
-    },
-    {
-      question: "What is Redux Thunk?",
-      answer:
-        "Redux Thunk allows writing async action creators that return functions instead of action objects.",
-    },
-    {
-      question: "What is Redux Toolkit?",
-      answer:
-        "Redux Toolkit is the official recommended way to write Redux, reducing boilerplate through utilities like configureStore and createSlice.",
-    },
-    {
-      question: "What is a slice in Redux Toolkit?",
-      answer:
-        "A slice bundles state, reducers, and actions for a feature into a single file.",
-    },
-    {
-      question: "What is createAsyncThunk?",
-      answer:
-        "createAsyncThunk handles async logic and automatically generates pending, fulfilled, and rejected action types.",
-    },
-    {
-      question: "How is combineReducers used?",
-      answer: "combineReducers merges multiple reducers into one root reducer.",
-    },
-    {
-      question: "Difference between Redux and Redux Toolkit?",
-      answer:
-        "Redux Toolkit simplifies Redux by reducing boilerplate and providing built-in tools for actions, reducers, and async calls.",
-    },
-    {
-      question: "Common Redux patterns?",
-      answer:
-        "Using slices for each feature, accessing state with useSelector, dispatching actions with useDispatch, and handling async with createAsyncThunk.",
-    },
-
-    // --------------------------
-    // Additional Questions
-    // --------------------------
-
-    {
-      question: "What is prop drilling?",
-      answer:
-        "Prop drilling occurs when props are passed through multiple component layers unnecessarily to reach a deeply nested component.",
-    },
-    {
-      question: "Difference between prop drilling and lifting state up?",
-      answer:
-        "Prop drilling pushes data downward through many layers; lifting state up moves shared state to a common parent.",
-    },
-    {
-      question: "What are Higher-Order Components (HOCs)?",
-      answer:
-        "HOCs are functions that take a component and return a new enhanced component to reuse logic.",
-    },
-    {
-      question: "What are render props?",
-      answer:
-        "Render props is a pattern where a component accepts a function prop that returns JSX for sharing logic.",
-    },
-    {
-      question: "What are React Portals?",
-      answer:
-        "Portals allow rendering components outside the parent DOM hierarchy, useful for modals and tooltips.",
-    },
-    {
-      question: "What are common performance pitfalls in React?",
-      answer:
-        "Unnecessary re-renders, heavy inline functions, and lack of memoization can slow down apps.",
-    },
-    {
-      question: "What is lazy loading in React?",
-      answer:
-        "Lazy loading loads components only when needed, improving initial load time.",
-    },
-    {
-      question:
-        "What is the difference between controlled and uncontrolled components?",
-      answer:
-        "Controlled components rely on React state for input values; uncontrolled components rely on DOM state accessed via refs.",
-    },
-    {
-      question: "What is React Fiber?",
-      answer:
-        "React Fiber is the reconciler that breaks rendering work into small chunks and improves UI responsiveness.",
-    },
-    {
-      question: "What are concurrent features in React?",
-      answer:
-        "Concurrent features let React multitask and prioritize urgent updates like user input over slower operations, keeping the UI responsive.",
-    },
-  ],
 javascript: [
   {
     question: "What is a closure in JavaScript?",

@@ -11,6 +11,7 @@ import { BookOpen, Sparkles } from "lucide-react";
 function AppContent() {
   const [activeTab, setActiveTab] = useState("react");
   const [selectedFilter, setSelectedFilter] = useState("all");
+  const [searchText, setSearchText] = useState("");
 
   const heroRef = useRef(null);
 
@@ -29,10 +30,11 @@ function AppContent() {
 
   const currentQuestions = data[activeTab] || [];
 
-  const filteredQuestions =
-    selectedFilter === "all"
-      ? currentQuestions
-      : currentQuestions.filter((q) => q.category === selectedFilter);
+  const filteredQuestions = currentQuestions
+    .filter((q) =>
+      selectedFilter === "all" ? true : q.category === selectedFilter
+    )
+    .filter((q) => q.question.toLowerCase().includes(searchText.toLowerCase()));
 
   const filters = [
     { label: "All", value: "all" },
@@ -76,6 +78,24 @@ function AppContent() {
             fundamentals
           </motion.p>
         </div>
+
+        {/* SEARCH BOX */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex justify-center mb-6"
+        >
+          <input
+            type="text"
+            placeholder="Search questions..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="w-full max-w-md px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 
+               bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200
+               focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </motion.div>
 
         {/* FILTER BUTTONS */}
         <motion.div
