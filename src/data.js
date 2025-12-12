@@ -434,219 +434,219 @@ export const data = {
 javascript: [
   {
     question: "What is a closure in JavaScript?",
-    answer: "A closure is when an inner function remembers and can access variables from its outer function's scope, even after that outer function has finished running. Real-world use case: You can use it for a private counter — only the inner function can access and change the count, keeping it hidden from the rest of the code."
+    answer: "A closure is when an inner function remembers and can access variables from its outer function's scope, even after that outer function has finished running. Real-world example: You can use it for a private counter — only the inner function can access and change the count, keeping it hidden from the rest of the code."
   },
   {
     question: "What is hoisting in JavaScript?",
-    answer: "Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their scope during compilation. This means you can call a function before it's declared in your code. Only the declaration is hoisted, not the initialization. For example, using var before its assignment gives undefined, but using let or const results in a ReferenceError. Real-world use case: console.log(a); var a = 5; prints undefined, but let a = 5 would break — useful to avoid surprises."
+    answer: "Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their scope during compilation. This means you can call a function before it's declared in your code. Only the declaration is hoisted, not the initialization. For example, using var before its assignment gives undefined, but using let or const results in a ReferenceError. Real-world example: console.log(a); var a = 5; prints undefined, but let a = 5 would break — useful to avoid surprises."
   },
   {
     question: "Difference between var, let, and const?",
-    answer: "var is function-scoped, can be redeclared and reassigned. let and const are block-scoped, safer, and predictable. let allows reassignment; const does not. Real-world use case: Use const for constants like API URLs, let for counters, and avoid var unless function scope is needed."
+    answer: "var is function-scoped, can be redeclared and reassigned. let and const are block-scoped, safer, and predictable. let allows reassignment; const does not. Real-world example: Use const for constants like API URLs, let for counters, and avoid var unless function scope is needed."
   },
   {
     question: "Difference between == and ===?",
-    answer: "== is a loose equality check that performs type conversion before comparing values, while === is strict and compares value and type. Real-world use case: input === 5 won’t convert '5' automatically, helping catch type issues early."
+    answer: "== is a loose equality check that performs type conversion before comparing values, while === is strict and compares value and type. Real-world example: input === 5 won’t convert '5' automatically, helping catch type issues early."
   },
   {
     question: "Explain scope in JavaScript",
-    answer: "Scope defines where a variable can be accessed: global, function, and block scope (let/const). Real-world use case: Keeping a counter inside a function so it doesn’t interfere with other code."
+    answer: "Scope defines where a variable can be accessed: global, function, and block scope (let/const). Real-world example: Keeping a counter inside a function so it doesn’t interfere with other code."
   },
   {
     question: "What is a prototype?",
-    answer: "Every object in JS has a prototype — a parent object it can inherit methods and properties from. Real-world use case: Instead of duplicating methods across objects, put it on the prototype for shared use and memory efficiency."
+    answer: "Every object in JS has a prototype — a parent object it can inherit methods and properties from. Real-world example: Instead of duplicating methods across objects, put it on the prototype for shared use and memory efficiency."
   },
   {
     question: "Difference between call, apply, and bind?",
-    answer: "All three set what 'this' refers to. call runs immediately with listed arguments, apply runs immediately with arguments in an array, bind returns a new function to run later. Real-world use case: Borrow methods or preset 'this' in event handlers."
+    answer: "All three set what 'this' refers to. call runs immediately with listed arguments, apply runs immediately with arguments in an array, bind returns a new function to run later. Real-world example: Borrow methods or preset 'this' in event handlers."
   },
   {
     question: "What is a callback function?",
-    answer: "A callback is a function passed as an argument to another function, executed later. Commonly used for async operations. Real-world use case: setTimeout(() => console.log('done'), 1000); runs after a second."
+    answer: "A callback is a function passed as an argument to another function, executed later. Commonly used for async operations. Real-world example: setTimeout(() => console.log('done'), 1000); runs after a second."
   },
   {
     question: "Difference between undefined and null?",
-    answer: "undefined means declared but not assigned; null is an intentional 'no value'. Real-world use case: API responses may return null for missing fields, uninitialized variables are undefined."
+    answer: "undefined means declared but not assigned; null is an intentional 'no value'. Real-world example: API responses may return null for missing fields, uninitialized variables are undefined."
   },
   {
     question: "What is the event loop?",
-    answer: "The event loop enables JS’s async, non-blocking behavior. It checks the Call Stack and Callback Queue, moving tasks from queue to stack when the stack is empty. Real-world use case: Coordinates async operations like network requests or timers."
+    answer: "The event loop enables JS’s async, non-blocking behavior. It checks the Call Stack and Callback Queue, moving tasks from queue to stack when the stack is empty. Real-world example: Coordinates async operations like network requests or timers."
   },
   {
     question: "What is callback hell?",
-    answer: "Callback hell occurs with multiple nested callbacks, making code hard to read. Solution: use Promises or async/await. Real-world use case: Chained API calls with multiple nested callbacks — better handled with promises."
+    answer: "Callback hell occurs with multiple nested callbacks, making code hard to read. Solution: use Promises or async/await. Real-world example: Chained API calls with multiple nested callbacks — better handled with promises."
   },
   {
     question: "What is a promise?",
-    answer: "A Promise represents the eventual completion (or failure) of an async operation. Allows attaching success (.then) or failure (.catch) handlers. Real-world use case: fetch(url).then(res => res.json()).then(data => console.log(data));"
+    answer: "A Promise represents the eventual completion (or failure) of an async operation. Allows attaching success (.then) or failure (.catch) handlers. Real-world example: fetch(url).then(res => res.json()).then(data => console.log(data));"
   },
   {
     question: "Difference between async/await and promises?",
-    answer: "Async/await is syntactic sugar over Promises, making async code look synchronous and easier to read. Real-world use case: const data = await fetchData();"
+    answer: "Async/await is syntactic sugar over Promises, making async code look synchronous and easier to read. Real-world example: const data = await fetchData();"
   },
   {
     question: "What is currying?",
-    answer: "Currying transforms a multi-argument function into a sequence of single-argument functions. Real-world use case: multiply(2)(3) instead of multiply(2, 3); useful for reusable functions."
+    answer: "Currying transforms a multi-argument function into a sequence of single-argument functions. Real-world example: multiply(2)(3) instead of multiply(2, 3); useful for reusable functions."
   },
   {
     question: "What is debouncing?",
-    answer: "Debouncing delays a function until after a pause in events. Real-world use case: In a search bar, API calls trigger only after the user stops typing."
+    answer: "Debouncing delays a function until after a pause in events. Real-world example: In a search bar, API calls trigger only after the user stops typing."
   },
   {
     question: "What is throttling?",
-    answer: "Throttling limits a function to run at most once per specified interval. Real-world use case: Limiting scroll or resize events for performance."
+    answer: "Throttling limits a function to run at most once per specified interval. Real-world example: Limiting scroll or resize events for performance."
   },
   {
     question: "Difference between ==, === and Object.is()?",
-    answer: "== does loose comparison with type coercion, === is strict, Object.is() handles special cases like NaN equality and -0/+0. Real-world use case: Comparing tricky edge cases safely."
+    answer: "== does loose comparison with type coercion, === is strict, Object.is() handles special cases like NaN equality and -0/+0. Real-world example: Comparing tricky edge cases safely."
   },
   {
     question: "What is a module in JavaScript?",
-    answer: "Modules break code into files with their own scope. You can export functions, objects, or primitives and import them elsewhere. Real-world use case: utils.js exports functions reused across multiple files."
+    answer: "Modules break code into files with their own scope. You can export functions, objects, or primitives and import them elsewhere. Real-world example: utils.js exports functions reused across multiple files."
   },
   {
     question: "What is destructuring?",
-    answer: "Destructuring unpacks values from arrays or objects into variables. Real-world use case: const {name, age} = user; avoids writing user.name repeatedly."
+    answer: "Destructuring unpacks values from arrays or objects into variables. Real-world example: const {name, age} = user; avoids writing user.name repeatedly."
   },
   {
     question: "What is the spread operator?",
-    answer: "The spread operator (...) expands arrays or objects into individual elements. Real-world use case: [...arr1, ...arr2] merges arrays."
+    answer: "The spread operator (...) expands arrays or objects into individual elements. Real-world example: [...arr1, ...arr2] merges arrays."
   },
   {
     question: "What is the rest operator?",
-    answer: "The rest operator (...) collects remaining arguments into an array. Real-world use case: function sum(...nums) handles any number of inputs."
+    answer: "The rest operator (...) collects remaining arguments into an array. Real-world example: function sum(...nums) handles any number of inputs."
   },
   {
     question: "What is a higher-order function?",
-    answer: "A function that takes another function as an argument, returns a function, or both. Real-world use case: arr.map(x => x*2) — map is higher-order."
+    answer: "A function that takes another function as an argument, returns a function, or both. Real-world example: arr.map(x => x*2) — map is higher-order."
   },
   {
     question: "Difference between call stack and task queue?",
-    answer: "Call stack runs code line by line; task queue holds async callbacks until stack is empty. Real-world use case: Explains setTimeout and promises execution order."
+    answer: "Call stack runs code line by line; task queue holds async callbacks until stack is empty. Real-world example: Explains setTimeout and promises execution order."
   },
   {
     question: "What is a memory leak?",
-    answer: "Memory leaks happen when unused memory isn’t released, slowing down apps. Real-world use case: Forgetting to remove event listeners after a component unmount in React."
+    answer: "Memory leaks happen when unused memory isn’t released, slowing down apps. Real-world example: Forgetting to remove event listeners after a component unmount in React."
   },
   {
     question: "Difference between var, let, const in hoisting and scope?",
-    answer: "var is hoisted and initialized as undefined (function-scoped). let/const are hoisted but not initialized (temporal dead zone) and block-scoped. Real-world use case: console.log(a); var a = 5 works, console.log(b); let b = 5 breaks."
+    answer: "var is hoisted and initialized as undefined (function-scoped). let/const are hoisted but not initialized (temporal dead zone) and block-scoped. Real-world example: console.log(a); var a = 5 works, console.log(b); let b = 5 breaks."
   },
   {
     question: "How do you select elements in the DOM?",
-    answer: "Use getElementById, querySelector, or querySelectorAll. Real-world use case: Selecting a button by ID to attach a click event."
+    answer: "Use getElementById, querySelector, or querySelectorAll. Real-world example: Selecting a button by ID to attach a click event."
   },
   {
     question: "How do you add and remove event listeners?",
-    answer: "Use element.addEventListener('event', handler) to attach, removeEventListener to detach. Real-world use case: Adding a click listener on a modal button and removing it when closed."
+    answer: "Use element.addEventListener('event', handler) to attach, removeEventListener to detach. Real-world example: Adding a click listener on a modal button and removing it when closed."
   },
   {
     question: "What is event delegation?",
-    answer: "Attach a listener to a parent and use event.target to check which child triggered it. Real-world use case: Handling clicks on long lists efficiently."
+    answer: "Attach a listener to a parent and use event.target to check which child triggered it. Real-world example: Handling clicks on long lists efficiently."
   },
   {
     question: "Difference between bubbling and capturing?",
-    answer: "Bubbling: event goes child → parent; capturing: parent → child. Default is bubbling. Real-world use case: Stopping a click on a modal backdrop from affecting inner buttons."
+    answer: "Bubbling: event goes child → parent; capturing: parent → child. Default is bubbling. Real-world example: Stopping a click on a modal backdrop from affecting inner buttons."
   },
   {
     question: "How do you prevent default behavior of events?",
-    answer: "Call event.preventDefault(). Real-world use case: Prevent a form from refreshing the page on submit."
+    answer: "Call event.preventDefault(). Real-world example: Prevent a form from refreshing the page on submit."
   },
   {
     question: "What are arrow functions and how are they different?",
-    answer: "Arrow functions have shorter syntax and no own 'this'; inherit 'this' from surrounding scope. Real-world use case: Cleaner array methods like arr.map(x => x*2)."
+    answer: "Arrow functions have shorter syntax and no own 'this'; inherit 'this' from surrounding scope. Real-world example: Cleaner array methods like arr.map(x => x*2)."
   },
   {
     question: "Difference between default and named exports?",
-    answer: "Default export: one main item per file; named exports: multiple items per file. Real-world use case: Export utility function as default, helpers as named."
+    answer: "Default export: one main item per file; named exports: multiple items per file. Real-world example: Export utility function as default, helpers as named."
   },
   {
     question: "What are template literals?",
-    answer: "Template literals use backticks (`) and ${} for interpolation. Real-world use case: const name = 'Alex'; console.log(`Hello, ${name}!`);"
+    answer: "Template literals use backticks (`) and ${} for interpolation. Real-world example: const name = 'Alex'; console.log(`Hello, ${name}!`);"
   },
   {
     question: "What are generators?",
-    answer: "Generators are functions that can pause and resume with yield. Real-world use case: Lazily producing values, e.g., reading a file line by line."
+    answer: "Generators are functions that can pause and resume with yield. Real-world example: Lazily producing values, e.g., reading a file line by line."
   },
   {
     question: "What are symbols in JavaScript?",
-    answer: "Symbols are unique, immutable values, often used as object keys to avoid name clashes. Real-world use case: Hidden object properties without collisions."
+    answer: "Symbols are unique, immutable values, often used as object keys to avoid name clashes. Real-world example: Hidden object properties without collisions."
   },
   {
     question: "What are microtasks and macrotasks?",
-    answer: "Microtasks (Promises) run before macrotasks (setTimeout) in the event loop. Real-world use case: Promise.resolve().then() runs before setTimeout."
+    answer: "Microtasks (Promises) run before macrotasks (setTimeout) in the event loop. Real-world example: Promise.resolve().then() runs before setTimeout."
   },
   {
     question: "Difference between synchronous and asynchronous code?",
-    answer: "Sync code runs line by line and blocks; async code allows other tasks to run while waiting. Real-world use case: Sync = reading a variable; async = fetching data from a server."
+    answer: "Sync code runs line by line and blocks; async code allows other tasks to run while waiting. Real-world example: Sync = reading a variable; async = fetching data from a server."
   },
   {
     question: "What is garbage collection in JavaScript?",
-    answer: "JS automatically frees memory from objects no longer referenced. Real-world use case: Variables inside a function disappear after it finishes unless stored elsewhere."
+    answer: "JS automatically frees memory from objects no longer referenced. Real-world example: Variables inside a function disappear after it finishes unless stored elsewhere."
   },
   {
     question: "What are weak maps and weak sets?",
-    answer: "WeakMap and WeakSet hold weak references to objects so garbage collection can clean them if unused. Real-world use case: Storing metadata for DOM elements safely."
+    answer: "WeakMap and WeakSet hold weak references to objects so garbage collection can clean them if unused. Real-world example: Storing metadata for DOM elements safely."
   },
   {
     question: "What is memoization?",
-    answer: "Caching a function’s results so repeated calls with same input return instantly. Real-world use case: Caching API responses or expensive calculations like factorial."
+    answer: "Caching a function’s results so repeated calls with same input return instantly. Real-world example: Caching API responses or expensive calculations like factorial."
   },
   {
     question: "What is 'this' in JavaScript?",
-    answer: "'this' refers to the object calling the function. Value depends on how the function is invoked. Real-world use case: Inside a class method, 'this' is the instance."
+    answer: "'this' refers to the object calling the function. Value depends on how the function is invoked. Real-world example: Inside a class method, 'this' is the instance."
   },
   {
     question: "Difference between class and prototype-based inheritance?",
-    answer: "Classes are syntactic sugar over prototypes. Real-world use case: Creating a User class with shared methods."
+    answer: "Classes are syntactic sugar over prototypes. Real-world example: Creating a User class with shared methods."
   },
   {
     question: "What is functional programming in JavaScript?",
-    answer: "Writing pure functions, avoiding side effects, and using higher-order functions like map, filter, reduce. Real-world use case: users.filter(u => u.active)."
+    answer: "Writing pure functions, avoiding side effects, and using higher-order functions like map, filter, reduce. Real-world example: users.filter(u => u.active)."
   },
   {
     question: "What is immutability in JavaScript?",
-    answer: "Not changing data directly, but creating new copies when needed. Real-world use case: In React, use setState([...old, newItem]) instead of mutating the array."
+    answer: "Not changing data directly, but creating new copies when needed. Real-world example: In React, use setState([...old, newItem]) instead of mutating the array."
   },
   {
     question: "What is composition over inheritance?",
-    answer: "Build functionality by combining smaller functions/objects instead of deep class hierarchies. Real-world use case: Combine drive() and fly() behaviors instead of multiple inheritance."
+    answer: "Build functionality by combining smaller functions/objects instead of deep class hierarchies. Real-world example: Combine drive() and fly() behaviors instead of multiple inheritance."
   },
   {
     question: "How do you handle errors in JavaScript?",
-    answer: "Use try...catch for sync code; .catch or try...catch for async code. Real-world use case: Wrapping API call in try/catch to show error message if server is down."
+    answer: "Use try...catch for sync code; .catch or try...catch for async code. Real-world example: Wrapping API call in try/catch to show error message if server is down."
   },
   {
     question: "What is localStorage, sessionStorage, and cookies?",
-    answer: "localStorage: permanent, sessionStorage: clears on tab close, cookies: sent to server. Real-world use case: JWT in localStorage, temporary data in sessionStorage, preferences in cookies."
+    answer: "localStorage: permanent, sessionStorage: clears on tab close, cookies: sent to server. Real-world example: JWT in localStorage, temporary data in sessionStorage, preferences in cookies."
   },
   {
     question: "What is XSS and how do you prevent it?",
-    answer: "XSS is when attackers inject malicious scripts. Prevent by sanitizing input and using frameworks that escape HTML. Real-world use case: Escaping <script> tags in user comments."
+    answer: "XSS is when attackers inject malicious scripts. Prevent by sanitizing input and using frameworks that escape HTML. Real-world example: Escaping <script> tags in user comments."
   },
   {
     question: "What is CSRF and how do you prevent it?",
-    answer: "CSRF tricks a logged-in user into making unwanted requests. Prevent with CSRF tokens and SameSite cookies. Real-world use case: Protect banking apps from auto-submitting transfers."
+    answer: "CSRF tricks a logged-in user into making unwanted requests. Prevent with CSRF tokens and SameSite cookies. Real-world example: Protect banking apps from auto-submitting transfers."
   },
   {
     question: "What are Babel and Webpack in simple terms?",
-    answer: "Babel converts modern JS to older JS for browser compatibility. Webpack bundles many files into optimized ones. Real-world use case: React apps use Babel and Webpack for deployment."
+    answer: "Babel converts modern JS to older JS for browser compatibility. Webpack bundles many files into optimized ones. Real-world example: React apps use Babel and Webpack for deployment."
   },
   {
     question: "What are the data types in JavaScript?",
-    answer: "Primitive: number, string, boolean, null, undefined, symbol, bigint. Non-primitive: objects, arrays, functions. Real-world use case: Knowing difference avoids bugs — strings/numbers immutable, arrays/objects mutable."
+    answer: "Primitive: number, string, boolean, null, undefined, symbol, bigint. Non-primitive: objects, arrays, functions. Real-world example: Knowing difference avoids bugs — strings/numbers immutable, arrays/objects mutable."
   },
   {
     question: "Difference between primitive and non-primitive data types?",
-    answer: "Primitive values are stored directly and compared by value; non-primitives are references compared by memory address. Real-world use case: {a:1} === {a:1} → false, because different memory addresses."
+    answer: "Primitive values are stored directly and compared by value; non-primitives are references compared by memory address. Real-world example: {a:1} === {a:1} → false, because different memory addresses."
   },
   {
     question: "What is event bubbling?",
-    answer: "Event bubbling: event triggers on the target element first, then its parent, up through ancestors. Real-world use case: Clicking a button inside a div triggers button, then div, then body events."
+    answer: "Event bubbling: event triggers on the target element first, then its parent, up through ancestors. Real-world example: Clicking a button inside a div triggers button, then div, then body events."
   },
   {
     question: "What is event capturing?",
-    answer: "Event capturing: event travels from topmost parent down to target element. Real-world use case: Capturing an event before it reaches the target element."
+    answer: "Event capturing: event travels from topmost parent down to target element. Real-world example: Capturing an event before it reaches the target element."
   }
 ],
 
@@ -686,43 +686,43 @@ javascript: [
 css: [
   {
     question: "What is the difference between relative, absolute, fixed, and sticky positioning in CSS?",
-    answer: "Relative: positioned relative to its normal spot. Absolute: positioned relative to its nearest positioned ancestor. Fixed: positioned relative to the viewport. Sticky: switches between relative and fixed depending on scroll. Real-world use case: A sticky navbar stays visible while scrolling, while a fixed footer always stays at the bottom of the screen."
+    answer: "Relative: positioned relative to its normal spot. Absolute: positioned relative to its nearest positioned ancestor. Fixed: positioned relative to the viewport. Sticky: switches between relative and fixed depending on scroll. Real-world example: A sticky navbar stays visible while scrolling, while a fixed footer always stays at the bottom of the screen."
   },
   {
     question: "What is the difference between inline, inline-block, and block elements in CSS?",
-    answer: "Inline doesn’t allow width/height, inline-block allows them but stays inline, block takes full width. Real-world use case: Inline-block is often used for creating button groups side by side with equal sizes."
+    answer: "Inline doesn’t allow width/height, inline-block allows them but stays inline, block takes full width. Real-world example: Inline-block is often used for creating button groups side by side with equal sizes."
   },
   {
     question: "What is the difference between em, rem, %, and px units in CSS?",
-    answer: "px: fixed pixels. em: relative to parent font size. rem: relative to root font size. %: relative to parent’s size. Real-world use case: Use rem for consistent scaling in responsive design."
+    answer: "px: fixed pixels. em: relative to parent font size. rem: relative to root font size. %: relative to parent’s size. Real-world example: Use rem for consistent scaling in responsive design."
   },
   {
     question: "What is the difference between inline-style, internal CSS, and external CSS?",
-    answer: "Inline affects one element, internal applies styles inside the same file, external links a CSS file. Real-world use case: External CSS keeps code clean and reusable across multiple pages."
+    answer: "Inline affects one element, internal applies styles inside the same file, external links a CSS file. Real-world example: External CSS keeps code clean and reusable across multiple pages."
   },
   {
     question: "What are pseudo-classes in CSS?",
-    answer: "Pseudo-classes define the state of an element, like :hover, :focus, :nth-child. Real-world use case: Highlighting a button when a user hovers with button:hover { background: blue; }."
+    answer: "Pseudo-classes define the state of an element, like :hover, :focus, :nth-child. Real-world example: Highlighting a button when a user hovers with button:hover { background: blue; }."
   },
   {
     question: "What is the difference between relative units and absolute units in CSS?",
-    answer: "Relative units (em, rem, %) adjust based on parent or root, absolute units (px, cm) stay fixed. Real-world use case: Relative units are better for responsive websites."
+    answer: "Relative units (em, rem, %) adjust based on parent or root, absolute units (px, cm) stay fixed. Real-world example: Relative units are better for responsive websites."
   },
   {
     question: "What are CSS flexbox and grid used for?",
-    answer: "Flexbox is for one-dimensional layouts (row or column), Grid is for two-dimensional layouts. Real-world use case: Flexbox is used for navbars, Grid for complex dashboard layouts."
+    answer: "Flexbox is for one-dimensional layouts (row or column), Grid is for two-dimensional layouts. Real-world example: Flexbox is used for navbars, Grid for complex dashboard layouts."
   },
   {
     question: "What is the difference between inline CSS and external CSS in performance?",
-    answer: "Inline CSS loads faster for small snippets but is harder to maintain, external CSS loads once and applies everywhere. Real-world use case: External CSS is best for large apps like e-commerce sites."
+    answer: "Inline CSS loads faster for small snippets but is harder to maintain, external CSS loads once and applies everywhere. Real-world example: External CSS is best for large apps like e-commerce sites."
   },
   {
     question: "What is the difference between relative z-index values?",
-    answer: "z-index controls the stack order of elements — higher values appear above lower ones. Real-world use case: Used in modals or dropdowns to make them appear above the page."
+    answer: "z-index controls the stack order of elements — higher values appear above lower ones. Real-world example: Used in modals or dropdowns to make them appear above the page."
   },
   {
     question: "What is the difference between transition, transform, and animation in CSS?",
-    answer: "transition: smooth change of properties. transform: rotates, scales, skews elements. animation: keyframe-based movements. Real-world use case: A button hover uses transition, a rotating logo uses transform, and a loading spinner uses animation."
+    answer: "transition: smooth change of properties. transform: rotates, scales, skews elements. animation: keyframe-based movements. Real-world example: A button hover uses transition, a rotating logo uses transform, and a loading spinner uses animation."
   },
   {
     question: "What is the CSS Box Model?",
@@ -738,7 +738,7 @@ css: [
   },
   {
     question: "What is the difference between pseudo-classes and pseudo-elements?",
-    answer: "Pseudo-classes like :hover represent a state of an element, while pseudo-elements like ::before or ::after create virtual elements that don’t exist in the DOM. Real-world use case: Adding decorative content like an icon before a heading with ::before."
+    answer: "Pseudo-classes like :hover represent a state of an element, while pseudo-elements like ::before or ::after create virtual elements that don’t exist in the DOM. Real-world example: Adding decorative content like an icon before a heading with ::before."
   },
   {
     question: "What is the importance of z-index?",
@@ -802,43 +802,43 @@ css: [
   html: [
   {
     question: "What is semantic HTML?",
-    answer: "Semantic HTML uses tags that describe the meaning of the content, like <header>, <article>, <footer>. Real-world use case: Improves SEO and accessibility — for example, <nav> helps screen readers identify navigation menus."
+    answer: "Semantic HTML uses tags that describe the meaning of the content, like <header>, <article>, <footer>. Real-world example: Improves SEO and accessibility — for example, <nav> helps screen readers identify navigation menus."
   },
   {
     question: "What are meta tags in HTML?",
-    answer: "Meta tags provide extra information about a webpage, like description, keywords, author, or viewport settings. Real-world use case: <meta name='description' content='E-commerce site for electronics'> improves search engine visibility."
+    answer: "Meta tags provide extra information about a webpage, like description, keywords, author, or viewport settings. Real-world example: <meta name='description' content='E-commerce site for electronics'> improves search engine visibility."
   },
   {
     question: "What is the difference between block-level and inline elements?",
-    answer: "Block-level elements (<div>, <p>, <section>) take full width and start on a new line, while inline elements (<span>, <a>, <strong>) only take the needed space. Real-world use case: <span> is used for styling part of text without breaking the line, <div> is used for layout sections."
+    answer: "Block-level elements (<div>, <p>, <section>) take full width and start on a new line, while inline elements (<span>, <a>, <strong>) only take the needed space. Real-world example: <span> is used for styling part of text without breaking the line, <div> is used for layout sections."
   },
   {
     question: "What are HTML5 APIs?",
-    answer: "HTML5 introduced built-in APIs like Geolocation, Canvas, Web Storage, and Audio/Video. Real-world use case: Geolocation API helps a food delivery app detect a user’s location automatically."
+    answer: "HTML5 introduced built-in APIs like Geolocation, Canvas, Web Storage, and Audio/Video. Real-world example: Geolocation API helps a food delivery app detect a user’s location automatically."
   },
   {
     question: "What is the difference between id and class?",
-    answer: "id is unique and identifies a single element, while class can be shared across multiple elements. Real-world use case: id='header' for one header section, class='btn' for styling multiple buttons."
+    answer: "id is unique and identifies a single element, while class can be shared across multiple elements. Real-world example: id='header' for one header section, class='btn' for styling multiple buttons."
   },
   {
     question: "What is the difference between <link> and <script>?",
-    answer: "<link> is used to include external resources like CSS, while <script> is used to load JavaScript. Real-world use case: <link rel='stylesheet' href='style.css'> adds styles, <script src='app.js'></script> adds interactivity."
+    answer: "<link> is used to include external resources like CSS, while <script> is used to load JavaScript. Real-world example: <link rel='stylesheet' href='style.css'> adds styles, <script src='app.js'></script> adds interactivity."
   },
   {
     question: "What are attributes in HTML?",
-    answer: "Attributes provide extra information about elements, written inside the opening tag. Real-world use case: <img src='logo.png' alt='Company Logo'> uses attributes to load an image and describe it for accessibility."
+    answer: "Attributes provide extra information about elements, written inside the opening tag. Real-world example: <img src='logo.png' alt='Company Logo'> uses attributes to load an image and describe it for accessibility."
   },
   {
     question: "What is the difference between inline, internal, and external CSS in HTML?",
-    answer: "Inline is written inside the tag, internal is in <style> in the same file, external is linked using <link>. Real-world use case: External CSS is best for big projects since one file controls the whole site’s design."
+    answer: "Inline is written inside the tag, internal is in <style> in the same file, external is linked using <link>. Real-world example: External CSS is best for big projects since one file controls the whole site’s design."
   },
   {
     question: "What is the difference between <section>, <article>, and <div>?",
-    answer: "<section> groups related content, <article> is for self-contained content, <div> is a generic container. Real-world use case: A blog site may use <section> for categories and <article> for each post."
+    answer: "<section> groups related content, <article> is for self-contained content, <div> is a generic container. Real-world example: A blog site may use <section> for categories and <article> for each post."
   },
   {
     question: "What are HTML forms used for?",
-    answer: "Forms collect user input through elements like text fields, checkboxes, and buttons. Real-world use case: Login, registration, and checkout pages all rely on forms."
+    answer: "Forms collect user input through elements like text fields, checkboxes, and buttons. Real-world example: Login, registration, and checkout pages all rely on forms."
   }
 ],
 nodejs: [
