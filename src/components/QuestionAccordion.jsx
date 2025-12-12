@@ -35,12 +35,30 @@ const QuestionAccordion = ({ question, answer, isOpen, onToggle }) => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 pt-2">
-              <div className="h-px bg-gradient-to-r from-blue-400/0 via-blue-400/50 to-blue-400/0 mb-4" />
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                {answer}
-              </p>
-            </div>
+          <div className="px-6 pb-5 pt-2">
+  <div className="h-px bg-gradient-to-r from-blue-400/0 via-blue-400/50 to-blue-400/0 mb-4" />
+
+  {(() => {
+    const parts = answer.split("Real-world example:");
+    const main = parts[0].trim();
+    const example = parts[1]?.trim();
+
+    return (
+      <div>
+        <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+          {main}
+        </p>
+
+        {example && (
+          <p className="text-blue-600 dark:text-blue-400 font-medium leading-relaxed mt-2">
+            <strong>Real-world example:</strong> {example}
+          </p>
+        )}
+      </div>
+    );
+  })()}
+</div>
+
           </motion.div>
         )}
       </AnimatePresence>
