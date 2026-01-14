@@ -27,6 +27,7 @@ const Navigation = ({ activeTab, setActiveTab }) => {
           >
             <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-teal-500 rounded-lg flex items-center justify-center">
               <Code2 className="w-6 h-6 text-white" />
+              <img src="" alt="" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-slate-900 dark:text-white">

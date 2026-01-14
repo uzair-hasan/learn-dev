@@ -83,11 +83,11 @@ function AppContent() {
 
   useEffect(() => {
     setSelectedFilter("all");
-    setVisibleCount(20); // reset lazy load when tab changes
+    setVisibleCount(10); // reset lazy load when tab changes
   }, [activeTab]);
 
   useEffect(() => {
-    setVisibleCount(20); // reset on filter/search change
+    setVisibleCount(10); // reset on filter/search change
   }, [selectedFilter, searchText]);
 
   // ⭐ SCROLL HANDLER — Load more when close to bottom
@@ -104,6 +104,32 @@ function AppContent() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
+  // stops inspecting
+//   useEffect(() => {
+//   const handler = (e) => {
+//     if (
+//       e.key === "F12" ||
+//       (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C" || e.key === "J")) ||
+//       (e.ctrlKey && e.key === "U")
+//     ) {
+//       e.preventDefault();
+//     }
+//   };
+  
+
+//   document.addEventListener("keydown", handler);
+//   return () => document.removeEventListener("keydown", handler);
+// }, []);
+
+// useEffect(() => {
+//   document.addEventListener("contextmenu", (e) => e.preventDefault());
+//   return () => {
+//     document.removeEventListener("contextmenu", (e) => e.preventDefault());
+//   };
+// }, []);
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-500">
